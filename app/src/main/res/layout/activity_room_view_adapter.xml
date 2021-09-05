@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context=".roomViewAdapter"
+    android:id="@+id/parent"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="10dp"
+    android:background="@color/dark_gray"
+    android:elevation="5dp">
+
+        <RelativeLayout
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="150dp"
+                android:src="@drawable/mobile_image_hero_2"
+                android:id="@+id/roomImage"
+                android:scaleType="fitXY"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Apartement"
+                android:id="@+id/name"
+                android:layout_below="@id/roomImage"
+                android:gravity="center_horizontal"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="10dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/name"
+                android:text="this place has the best view in the world"
+                android:id="@+id/place"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/place"
+                android:text="IDR 50,000,000.00"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="20dp"
+                android:id="@+id/price"/>
+
+        </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

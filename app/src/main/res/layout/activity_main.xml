@@ -10,9 +10,27 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/right_true"
+                android:id="@+id/right"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/left_true"
+                android:id="@+id/left"
+                android:visibility="gone"/>
+
 
             <ImageView
                 android:layout_width="match_parent"
@@ -38,28 +56,32 @@
                 android:layout_marginStart="20dp"
                 android:id="@+id/hamburger" />
 
+
             <RelativeLayout
+                android:id="@+id/relAngle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_alignBottom="@+id/hero1">
+                android:layout_alignBottom="@+id/hero1"
+                android:layout_alignParentEnd="true">
 
                 <ImageButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/icon_angle_left"
-                    android:background="@color/black"
                     android:id="@+id/angleLeft"
-                    android:padding="20dp"/>
-
-                <ImageButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/icon_angle_right"
                     android:background="@color/black"
-                    android:layout_toRightOf="@+id/angleLeft"
+                    android:padding="20dp"
+                    android:src="@drawable/icon_angle_left"
+                    />
+
+                <ImageButton
                     android:id="@+id/angleRight"
-                    android:padding="20dp"/>
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/angleLeft"
+                    android:background="@color/black"
+                    android:padding="20dp"
+                    android:src="@drawable/icon_angle_right"
+                    />
 
             </RelativeLayout>
 
@@ -75,7 +97,10 @@
                     android:layout_height="wrap_content"
                     android:text="@string/discover"
                     android:id="@+id/discover"
-                    android:layout_marginTop="30dp"/>
+                    android:layout_marginTop="30dp"
+                    android:textSize="25sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/spartan_variable_fontweight"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -83,31 +108,34 @@
                     android:text="@string/we"
                     android:layout_below="@id/discover"
                     android:layout_marginTop="25dp"
-                    android:id="@+id/we"/>
+                    android:id="@+id/we"
+                    android:fontFamily="@font/spartan_variable_fontweight"/>
 
                 <Button
+                    android:id="@+id/shop"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/shop"
-                    android:textColor="@color/black"
+                    android:layout_below="@+id/we"
                     android:layout_marginTop="50dp"
                     android:layout_marginBottom="40dp"
-                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-                    android:layout_below="@+id/we"
-                    android:id="@+id/shop"
+                    android:gravity="fill_horizontal"
                     android:paddingEnd="50dp"
-                    android:gravity="fill_horizontal"/>
+                    android:text="@string/shop"
+                    android:textColor="@color/black"
+                    android:textSize="15dp" />
 
                 <ImageView
+                    android:id="@+id/arrow"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/icon_arrow"
                     android:layout_below="@id/we"
-                    android:layout_toEndOf="@+id/shop"
                     android:layout_marginTop="70dp"
-                    />
+                    android:layout_toEndOf="@+id/shop"
+                    android:src="@drawable/icon_arrow" />
 
             </RelativeLayout>
+
 
             <ImageView
                 android:layout_width="match_parent"
@@ -127,7 +155,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/about"
-                    android:id="@+id/about"/>
+                    android:id="@+id/about"
+                    android:layout_marginTop="30dp"/>
 
                 <TextView
                     android:layout_width="match_parent"
@@ -135,6 +164,7 @@
                     android:text="@string/our"
                     android:id="@+id/our"
                     android:layout_below="@id/about"
+                    android:layout_marginTop="25dp"
                     />
 
             </RelativeLayout>
@@ -143,7 +173,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:src="@drawable/image_about_light"
-                android:layout_below="@+id/Relabout"/>
+                android:layout_below="@+id/Relabout"
+                android:id="@+id/light"/>
 
 
         </RelativeLayout>

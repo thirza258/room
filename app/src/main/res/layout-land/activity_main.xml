@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/right_true"
+                android:id="@+id/right"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/left_true"
+                android:id="@+id/left"
+                android:visibility="gone"/>
+
+
+            <ImageView
+                android:id="@+id/hero1"
+                android:layout_width="400dp"
+                android:layout_height="400dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/desktop_image_hero_1" />
+
+            <ImageView
+                android:layout_width="66dp"
+                android:layout_height="16dp"
+                android:src="@drawable/logo"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="46dp"
+                android:id="@+id/logo"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_toEndOf="@+id/logo"
+                android:layout_marginTop="46dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="home"
+                    android:id="@+id/home"
+                    android:textColor="@color/white"
+                    android:layout_marginStart="30dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="shop"
+                    android:id="@+id/shop1"
+                    android:textColor="@color/white"
+                    android:layout_marginStart="30dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="about"
+                    android:id="@+id/aboutRel"
+                    android:textColor="@color/white"
+                    android:layout_marginStart="30dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="contact"
+                    android:id="@+id/contact"
+                    android:textColor="@color/white"
+                    android:layout_marginStart="30dp"
+                    />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/relAngle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/hero1"
+                android:layout_toEndOf="@+id/hero1">
+
+                <ImageButton
+                    android:id="@+id/angleLeft"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/black"
+                    android:padding="20dp"
+                    android:src="@drawable/icon_angle_left"
+                    />
+
+                <ImageButton
+                    android:id="@+id/angleRight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/angleLeft"
+                    android:background="@color/black"
+                    android:padding="20dp"
+                    android:src="@drawable/icon_angle_right"
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/hero1"
+                android:layout_margin="30dp"
+                android:id="@+id/Reldis">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/discover"
+                    android:id="@+id/discover"
+                    android:layout_marginTop="30dp"
+                    android:textSize="25sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/spartan_variable_fontweight"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/we"
+                    android:layout_below="@id/discover"
+                    android:layout_marginTop="25dp"
+                    android:id="@+id/we"
+                    android:fontFamily="@font/spartan_variable_fontweight"
+                    android:textSize="12sp"/>
+
+                <Button
+                    android:id="@+id/shop"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/we"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="40dp"
+                    android:gravity="fill_horizontal"
+                    android:text="@string/shop"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+                <ImageView
+                    android:id="@+id/arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/we"
+                    android:layout_marginTop="35dp"
+                    android:layout_toEndOf="@+id/shop"
+                    android:src="@drawable/icon_arrow" />
+
+            </RelativeLayout>
+
+
+            <ImageView
+                android:id="@+id/dark"
+                android:layout_width="210dp"
+                android:layout_height="210dp"
+                android:layout_below="@id/hero1"
+                android:src="@drawable/image_about_dark"
+                android:scaleType="fitXY"/>
+
+            <RelativeLayout
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/dark"
+                android:layout_below="@id/hero1"
+                android:id="@+id/Relabout"
+                android:layout_margin="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/about"
+                    android:id="@+id/about"
+                    android:layout_marginTop="20dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/our"
+                    android:id="@+id/our"
+                    android:layout_below="@id/about"
+                    android:layout_marginTop="25dp"
+                    android:textSize="12sp"
+                    />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/light"
+                android:layout_width="match_parent"
+                android:layout_height="210dp"
+                android:layout_below="@id/hero1"
+                android:src="@drawable/image_about_light"
+                android:layout_toEndOf="@+id/Relabout"
+                android:scaleType="fitXY"/>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+
+</RelativeLayout>
